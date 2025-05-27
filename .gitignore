@@ -1,0 +1,51 @@
+.env.local
+firebase.ts
+node_modules
+.next
+AMIE-App
+amie-app2
+doctorpoc
+sft_output
+medical_dataset
+
+
+#datasets
+datasets/SFT/chatdoctor5k.json
+datasets/SFT-FUTURE/generalize2.json
+datasets/SFT-FUTURE/generalize1.json
+datasets/SFT-FUTURE/converted_augmented_clinical_notes_qa.jsonl
+datasets/combined_dataset.jsonl
+datasets/icliniq.json
+datasets_for_dataGen
+datasets/other
+# second iteration of datasets
+patient_followups
+questioning_doctor_outputs
+summarizer_outputs
+diagnosing_doctor_outputs
+treatment_plans
+
+
+# Third iteration of datasets
+2diagnosing_doctor_outputs
+2patient_followups
+2questioning_doctor_outputs
+2summarizer_outputs
+2treatment_plans
+#random files
+validated_disease_vignettes.json
+edited_file.jsonl
+combined_conversations.json
+all_summarizer_outputs.json
+all_questioning_doctor_outputs.json
+all_patient_followups.json
+all_diagnosing_doctor_outputs.json
+
+.DS_Store
+
+
+#3d
+3d/Frontend/node_modules/
+3d/Frontend/.next/
+3d/backend/api_key.py
+>>>>>>> cbfa81b4ab76cd1acbf8a9c5636236f68defc63e
