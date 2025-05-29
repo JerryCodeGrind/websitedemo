@@ -49,3 +49,4 @@ all_diagnosing_doctor_outputs.json
 3d/Frontend/.next/
 3d/backend/api_key.py
 >>>>>>> cbfa81b4ab76cd1acbf8a9c5636236f68defc63e
+.env
