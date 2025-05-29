@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useState, useRef, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { PerspectiveCamera } from '@react-three/drei';
@@ -39,7 +40,7 @@ const PortalScene = (props: PortalSceneProps) => {
   }, []);
 
   return (
-    <div className="h-screen w-full bg-neutral-900 relative">
+    <div className="relative h-screen w-full bg-neutral-900">
       <Canvas 
         key={canvasResetKey}
         gl={{ antialias: true }}
