@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { PerspectiveCamera, Text } from '@react-three/drei';
+import { PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
 import Box3D from './Box3D';
 import MouseParallax from './MouseParallax';
@@ -50,20 +50,15 @@ const PortalScene = (props: PortalSceneProps) => {
         }}
       >
         <PerspectiveCamera makeDefault position={[0, 0, 15]} fov={60} />
-
         <MouseParallax isEnabled={!isZooming} strength={0.5} dampingFactor={0.10} />
-
         <Box3D 
           key={boxKey} 
           onZoomStart={() => setIsZooming(true)} 
           getTextAnimationControls={() => enterTextRef.current}
         />
-
         <BasicLights />
-
         <AnimatedStars />
 
-        {/* Fading Platforms with adjusted spacing and depth */}
         <Platform 
           position={[17, -35, -40]} 
           rotation={Math.PI * 2.25}
@@ -100,16 +95,19 @@ const PortalScene = (props: PortalSceneProps) => {
           color="#555555"
           opacity={0}
         />
-
-        <Text
-          position={[-6, 0, 0]}
-          rotation={[0, 0, 0]}
-          scale={1}
-          color="#ffffff"
-          children="Enter the Bluebox"
-        />
-
       </Canvas>
+
+      {/* Hero Text Overlay */}
+      <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+        <div className="text-center px-4">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-serif">
+            Your Personal AI Doctor
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            24/7 medical guidance powered by advanced AI technology
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
